@@ -1,5 +1,12 @@
 # salesforce-data-replication
 
+This node app allows you to replicate data from a Salesforce org to PostgreSQL based on the credentials and object visibility of your user,
+utilizing the [Salesforce REST APIs](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_query.htm).
+
+Full documentation of this project can be found on Medium.
+
+***
+
 ## Installation
 
 - clone the repository
@@ -22,6 +29,9 @@ BEARER_TOKEN=<your Bearer token from Salesforce Inspector>
 - install postgres and create the schema mentioned below
 - run with `yarn main`
 
+***
+
+
 ## Database schema
 
 Create the tables `Account` and `Contact` in the public schema of the Postgresql database server you are pointing to with your .env configuration
@@ -40,8 +50,6 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public."Account" OWNER to postgres;
 
 ```
-
-***
 
 ### Contact
 ```
