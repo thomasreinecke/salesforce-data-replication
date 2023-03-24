@@ -9,6 +9,14 @@ Full documentation of this project can be found on Medium.
 
 ## Installation
 
+- install postgres in a local docker container
+```
+docker pull postgres:13.7
+docker run -itd -e POSTGRES_USER=postgres -e \
+       POSTGRES_PASSWORD=<your_password> -p 5432:5432 \
+       --name postgresql postgres:13.7
+```
+
 - clone the repository
 - install dependencies with `yarn` or `npm install`
 - create the `.env` using the following template
@@ -66,4 +74,33 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Account" OWNER to postgres;
 
+```
+
+
+
+
+# Example output
+```
+
+$ node main.js
+🚀 PG:SALESFORCE-DATA connected to postgres @ localhost:5432 @ salesforce-data
+🚀 STARTED: 12:19:06 PM
+ℹ️ replicating table 'Account'
+ℹ️ records to be processed : 117081
+📁 in progress - total records 117081, written 2000
+📁 in progress - total records 117081, written 4000
+📁 in progress - total records 117081, written 6000
+...
+📁 in progress - total records 117081, written 117081
+✅ done - total records 117081, written 117081
+ℹ️ replicating table 'Contact'
+ℹ️ records to be processed : 386906
+📁 in progress - total records 386906, written 2000
+📁 in progress - total records 386906, written 4000
+📁 in progress - total records 386906, written 6000
+...
+📁 in progress - total records 386906, written 386906
+✅ done - total records 386906, written 386906
+🚀 ENDED: 12:19:06 PM (258 seconds)
+done
 ```
