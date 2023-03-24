@@ -19,11 +19,6 @@ const PG_SALESFORCE_DATA_CONFIG = {
     acquire: 60000,
 };
 
-const url = process.env.URL;
-const token = process.env.BEARER_TOKEN;
-
-
-
 // main
 async function main () {
     const pgSalesforceData = new Pool(PG_SALESFORCE_DATA_CONFIG);

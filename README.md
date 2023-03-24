@@ -3,7 +3,8 @@
 This node app allows you to replicate data from a Salesforce org to PostgreSQL based on the credentials and object visibility of your user,
 utilizing the [Salesforce REST APIs](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_query.htm).
 
-Full documentation of this project can be found on Medium.
+Full documentation of this project can be found on Medium
+https://towardsdatascience.com/salesforce-data-replication-with-node-and-postgresql-469372c1890d
 
 ***
 
@@ -76,31 +77,3 @@ ALTER TABLE IF EXISTS public."Account" OWNER to postgres;
 
 ```
 
-
-
-
-# Example output
-```
-
-$ node main.js
-🚀 PG:SALESFORCE-DATA connected to postgres @ localhost:5432 @ salesforce-data
-🚀 STARTED: 12:19:06 PM
-ℹ️ replicating table 'Account'
-ℹ️ records to be processed : 117081
-📁 in progress - total records 117081, written 2000
-📁 in progress - total records 117081, written 4000
-📁 in progress - total records 117081, written 6000
-...
-📁 in progress - total records 117081, written 117081
-✅ done - total records 117081, written 117081
-ℹ️ replicating table 'Contact'
-ℹ️ records to be processed : 386906
-📁 in progress - total records 386906, written 2000
-📁 in progress - total records 386906, written 4000
-📁 in progress - total records 386906, written 6000
-...
-📁 in progress - total records 386906, written 386906
-✅ done - total records 386906, written 386906
-🚀 ENDED: 12:19:06 PM (258 seconds)
-done
-```
