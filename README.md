@@ -4,7 +4,7 @@ This node app allows you to replicate data from a Salesforce org to PostgreSQL b
 utilizing the [Salesforce REST APIs](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_query.htm).
 
 Full documentation of this project can be found on Medium
-https://towardsdatascience.com/salesforce-data-replication-with-node-and-postgresql-469372c1890d
+https://medium.com/itnext/salesforce-data-replication-with-node-and-postgresql-469372c1890d
 
 ***
 
